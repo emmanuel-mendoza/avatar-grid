@@ -1,0 +1,58 @@
+.avatar-container {
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    border-width: 3px;
+    border-color: transparent;
+}
+
+.mask-container {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mask-back {
+    overflow: hidden;
+    height: 100%;
+}
+
+.mask-front {
+    height: 142.85%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.mask-front-wrapper {
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    height: 70%;
+    overflow: hidden;
+    bottom: -1px;
+    left: 0px;
+}
+
+.image-container {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 125%;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.image-container > img {
+    width: auto;
+    height: calc(100%/1.25);
+    transform: scale(1.21) translateY(-10.5%);
+    position: absolute;
+    bottom: 0px;
+}
