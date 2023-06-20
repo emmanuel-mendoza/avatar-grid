@@ -52,7 +52,7 @@
 .image-container > img {
     width: auto;
     height: calc(100%/1.25);
-    transform: scale(1.21) translateY(-10.5%);
+    transform: scale(1.21) translateY(-8.5%);
     position: absolute;
     bottom: 0px;
 }

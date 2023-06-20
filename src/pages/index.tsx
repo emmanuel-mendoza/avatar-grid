@@ -1,6 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Avatar from "../components/Avatar/Avatar"
+import SideGrowingGrid from "../components/SideGrowingGrid/SideGrowingGrid"
 
 const mainStyles: React.CSSProperties = {
   paddingLeft: '6rem',
@@ -8,7 +9,8 @@ const mainStyles: React.CSSProperties = {
   paddingTop: '4rem',
   paddingBottom: '4rem',
   backgroundColor: 'lightblue',
-  height: '100vh'
+  minHeight: '100vh',
+  height: '100%',
 }
 
 const wrapperStyles: React.CSSProperties = {
@@ -18,16 +20,30 @@ const wrapperStyles: React.CSSProperties = {
   alignItems: 'center'
 }
 
+const avatars : string[] = [
+  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
+  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
+  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
+  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
+  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp'
+]
+
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main style={mainStyles}>
       <div style={wrapperStyles}>
         <h1>Simple Avatar Grid implementation</h1>
-        <div style={{ minWidth: '240px', maxWidth: '240px'}}>
-        <Avatar cmpHeight = '210px' bgColor = 'white' marginT = '40px' marginB='40px'
-                    clipShape = 'https://atwebsite.blob.core.windows.net/images/rounded-corners-rect.svg'
-                    imgSrc='https://atwebsite.blob.core.windows.net/images/Alejandro.webp' />
-        </div>
+        <SideGrowingGrid coverColor="white">
+        {
+          avatars.map((avatar, i) => (
+            <div style={{ minWidth: '240px', maxWidth: '240px'}} key={i}>
+              <Avatar cmpHeight = '210px' bgColor = 'white' marginT = '40px' marginB='40px'
+                clipShape = 'https://atwebsite.blob.core.windows.net/images/rounded-corners-rect.svg'
+                imgSrc={avatar} />
+            </div>
+          ))
+        }
+        </SideGrowingGrid>
       </div>
     </main>
   )

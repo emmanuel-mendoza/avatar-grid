@@ -29,7 +29,7 @@ const Mask: React.FC<MaskProps> = ({ bgColor = 'white', clipShape }): ReactEleme
 const Avatar: React.FC<AvatarProps> = ({ cmpHeight = '310px', bgColor = 'white', marginT = '0px',
     marginB = '0px', clipShape, imgSrc}): ReactElement => {
     return (
-        <div className='avatar-container' style={{borderColor: bgColor,
+        <div className='avatar-container' style={{borderColor: bgColor, borderStyle: 'solid',
             height: `calc(${cmpHeight} + ${marginT} + ${marginB})`, borderTopWidth: marginT, borderBottomWidth: marginB}}>
             <div className='mask-container mask-back'>
                 <Mask bgColor={bgColor} clipShape={clipShape} />

@@ -1,0 +1,16 @@
+.sgg-container {
+    width: 100%;
+    min-width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.sgg-row {
+    display:flex; 
+    justify-content: center;
+    width: 100%;
+}
