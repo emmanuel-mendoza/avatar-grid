@@ -9,7 +9,7 @@ const SideGrowingGrid: React.FC<SideGrowingGridProps> = ({ coverColor = 'white',
     const [itemRef, { width: iWidth }] = useElementSize();
     const childs = ( (children as JSX.Element[]).map ? children : [(children as JSX.Element)] ) as JSX.Element[]; 
     const itemsPerRow : number = iWidth === 0 ? childs.length : iWidth > width ? 1 : Math.floor(width / iWidth);
-    console.log('GW: ', width, ' CW: ', iWidth, 'IPR: ', itemsPerRow)
+    
     return (
         <div className='sgg-container'
             ref={gridRef}>

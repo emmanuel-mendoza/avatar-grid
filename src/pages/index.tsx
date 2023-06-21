@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <SideGrowingGrid coverColor="white">
           {
             avatars.map((avatar, i) => (
-              <div style={{ minWidth: '240px', maxWidth: '240px'}} key={i}>
+              <div style={{ minWidth: '280px', maxWidth: '280px'}} key={i}>
                 <Avatar cmpHeight = '210px' bgColor = 'white' marginT = '40px' marginB='40px'
                   clipShape = 'https://atwebsite.blob.core.windows.net/images/rounded-corners-rect.svg'
                   imgSrc={avatar} />
