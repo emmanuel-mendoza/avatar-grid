@@ -1,11 +1,14 @@
 {
-  "name": "gatsby-starter-minimal-ts",
+  "name": "avatar-grid",
   "version": "1.0.0",
   "private": true,
-  "description": "A Gatsby starter written in TypeScript with no plugins and a single welcome page.",
-  "author": "Jude Agboola",
+  "description": "Web component where items shares container background",
+  "author": "Emmanuel Mendoza <emmanuel.m.developer@gmail.com>",
+  "homepage": "https://avatar-grid.vercel.app/",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "CSS",
+    "mask"
   ],
   "scripts": {
     "develop": "gatsby develop",

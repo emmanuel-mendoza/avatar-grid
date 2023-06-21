@@ -26,7 +26,7 @@ const avatars : string[] = [
   'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
   'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
   'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
-  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp'
+  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
 ]
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -37,12 +37,12 @@ const IndexPage: React.FC<PageProps> = () => {
         <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%'}}>
         <div className="animated-bg"></div>
         <div className="animated-doodle"></div>
-          <SideGrowingGrid coverColor="white">
+          <SideGrowingGrid coverColor="#F2F2F2">
           {
             avatars.map((avatar, i) => (
               <div style={{ minWidth: '280px', maxWidth: '280px'}} key={i}>
-                <Avatar cmpHeight = '210px' bgColor = 'white' marginT = '40px' marginB='40px'
-                  clipShape = 'https://atwebsite.blob.core.windows.net/images/rounded-corners-rect.svg'
+                <Avatar cmpHeight = '210px' bgColor = '#F2F2F2' marginT = '100px' marginB='40px'
+                  clipShape = 'https://atwebsite.blob.core.windows.net/images/hexagon.svg'
                   imgSrc={avatar} />
               </div>
             ))
