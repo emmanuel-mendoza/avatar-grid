@@ -1,0 +1,12 @@
+.embed-video-container {
+    position: absolute;
+    inset: 0px;
+}
+
+.embed-video-container > video {
+    object-fit: cover;
+    position: absolute;
+    inset: 0px;
+    height: 100%;
+    width: 100%;
+}

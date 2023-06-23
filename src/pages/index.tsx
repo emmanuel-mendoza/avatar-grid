@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import Avatar from "../components/Avatar/Avatar"
 import SideGrowingGrid from "../components/SideGrowingGrid/SideGrowingGrid"
 import "../styles/index.modules.css"
+import BgVideo from "../components/BgVideo/BgVideo"
 
 const mainStyles: React.CSSProperties = {
   paddingLeft: '6rem',
@@ -12,6 +13,7 @@ const mainStyles: React.CSSProperties = {
   backgroundColor: 'lightblue',
   minHeight: '100vh',
   height: '100%',
+  position: 'relative',
 }
 
 const wrapperStyles: React.CSSProperties = {
@@ -32,23 +34,24 @@ const avatars : string[] = [
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main style={mainStyles}>
+      <BgVideo />
       <div style={wrapperStyles}>
         <h1>Simple Avatar Grid implementation</h1>
         <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%'}}>
-        <div className="animated-bg"></div>
-        <div className="animated-doodle"></div>
-          <SideGrowingGrid coverColor="#F2F2F2">
-          {
-            avatars.map((avatar, i) => (
-              <div style={{ minWidth: '280px', maxWidth: '280px'}} key={i}>
-                <Avatar cmpHeight = '210px' bgColor = '#F2F2F2' marginT = '100px' marginB='40px'
-                  clipShape = 'https://atwebsite.blob.core.windows.net/images/hexagon.svg'
-                  imgSrc={avatar} />
-              </div>
-            ))
-          }
-          </SideGrowingGrid>
-        </div>
+          <div style={{display: "none"}} className="animated-bg"></div>
+          <div style={{display: "none"}} className="animated-doodle"></div>
+            <SideGrowingGrid coverColor="#F2F2F2">
+            {
+              avatars.map((avatar, i) => (
+                <div style={{ minWidth: '280px', maxWidth: '280px'}} key={i}>
+                  <Avatar cmpHeight = '210px' bgColor = '#F2F2F2' marginT = '100px' marginB='40px'
+                    clipShape = 'https://atwebsite.blob.core.windows.net/images/hexagon.svg'
+                    imgSrc={avatar} />
+                </div>
+              ))
+            }
+            </SideGrowingGrid>
+          </div>
       </div>
     </main>
   )
