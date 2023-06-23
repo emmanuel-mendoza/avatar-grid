@@ -56,4 +56,12 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => (
+    <>
+      <title>Avatar Grid</title>
+      <meta property="og:url" content="https://avatar-grid.vercel.app/" />
+      <meta property="og:title" content="Avatar Grid" />
+      <meta property="og:image" content="https://atwebsite.blob.core.windows.net/images/avatar%20grid%20-%20ui%20design.png" />
+      <meta property="og:description" content="A simple avatar grid implementation" />
+    </>
+);
