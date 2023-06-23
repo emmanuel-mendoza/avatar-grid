@@ -42,3 +42,10 @@
     background-position-x: center;
     animation: custom-bounce 200s linear infinite;
 }
+
+h1 {
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: #eee;
+}
