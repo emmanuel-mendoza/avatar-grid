@@ -27,10 +27,12 @@ const Mask: React.FC<MaskProps> = ({ bgColor = 'white', shapeSrc }): ReactElemen
 }
 
 const Avatar: React.FC<AvatarProps> = ({ height = '310px', bgColor = 'white', paddingTop = '0px',
-    paddingBottom = '0px', shapeSrc, imageSrc}): ReactElement => {
+    paddingBottom = '0px', shapeSrc, imageSrc, coveredPortion = .5}): ReactElement => {
     return (
         <div className='avatar-container' style={{borderColor: bgColor, borderStyle: 'solid',
-            height: `calc(${height} + ${paddingTop} + ${paddingBottom})`, borderTopWidth: paddingTop, borderBottomWidth: paddingBottom}}>
+            height: `calc(${height} + ${paddingTop} + ${paddingBottom})`, 
+            borderTopWidth: paddingTop, borderBottomWidth: paddingBottom,
+            '--covered-portion': coveredPortion} as React.CSSProperties}>
             <div className='mask-container mask-back'>
                 <Mask bgColor={bgColor} shapeSrc={shapeSrc} />
             </div>

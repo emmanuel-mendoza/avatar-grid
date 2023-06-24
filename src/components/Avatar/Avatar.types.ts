@@ -10,6 +10,7 @@ type AvatarProps = {
     imageSrc: string,
     paddingTop?: string,
     paddingBottom?: string,
+    coveredPortion?: number,
 };
 
 export default AvatarProps;

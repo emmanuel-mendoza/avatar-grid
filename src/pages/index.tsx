@@ -47,7 +47,8 @@ const IndexPage: React.FC<PageProps> = () => {
                   <AvatarCard avatar={{ height: '210px', bgColor: '#F2F2F2', paddingTop: '100px',
                                         paddingBottom: '40px',
                                         shapeSrc: 'https://atwebsite.blob.core.windows.net/images/hexagon.svg',
-                                        imageSrc: avatar.url}}
+                                        imageSrc: avatar.url,
+                                        coveredPortion: .3}}
                               name={avatar.name}
                               role={avatar.role} />
                 </div>
