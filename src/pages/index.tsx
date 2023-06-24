@@ -37,7 +37,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <BgVideo />
       <div style={wrapperStyles}>
         <h1>Simple Avatar Grid implementation</h1>
-        <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%'}}>
+        <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%', borderRadius: '20px'}}>
           <div style={{display: "none"}} className="animated-bg"></div>
           <div style={{display: "none"}} className="animated-doodle"></div>
             <SideGrowingGrid coverColor="#F2F2F2">
