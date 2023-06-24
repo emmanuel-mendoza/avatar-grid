@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import Avatar from "../components/Avatar/Avatar"
+import AvatarCard from "../components/AvatarCard/AvatarCard"
 import SideGrowingGrid from "../components/SideGrowingGrid/SideGrowingGrid"
 import "../styles/index.modules.css"
 import BgVideo from "../components/BgVideo/BgVideo"
@@ -23,12 +23,12 @@ const wrapperStyles: React.CSSProperties = {
   alignItems: 'center'
 }
 
-const avatars : string[] = [
-  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
-  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
-  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
-  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
-  'https://atwebsite.blob.core.windows.net/images/Emmanuel Mendoza.webp',
+const avatars = [
+  { url: 'https://res.cloudinary.com/dmela7d4j/image/upload/v1687633262/avatar-grid/zcm7p6bmdzk2iztvjcjp', name: 'Indiana Jones', role: "Adventurer and Archaeologist" },
+  { url: 'https://res.cloudinary.com/dmela7d4j/image/upload/v1687633262/avatar-grid/uclotwnyw3gaorbov9n9.png', name: 'James Bond', role: "Secret Agent 007" },
+  { url: 'https://res.cloudinary.com/dmela7d4j/image/upload/v1687633262/avatar-grid/tp6dnx3mgr3h0zo5upkw', name: 'Lara Croft', role: "Adventurer and Archaeologist" },
+  { url: 'https://res.cloudinary.com/dmela7d4j/image/upload/v1687633262/avatar-grid/y2n4zxsyetpemrw1kstm', name: 'Sarah Connor', role: "Future War Resistance Leader" },
+  { url: 'https://res.cloudinary.com/dmela7d4j/image/upload/v1687633262/avatar-grid/vn2gdgewfogyuurtyixi', name: 'Lod Voldermort', role: "He-Who-Must-Not-Be-Named" },
 ]
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -44,9 +44,12 @@ const IndexPage: React.FC<PageProps> = () => {
             {
               avatars.map((avatar, i) => (
                 <div style={{ minWidth: '280px', maxWidth: '280px'}} key={i}>
-                  <Avatar cmpHeight = '210px' bgColor = '#F2F2F2' marginT = '100px' marginB='40px'
-                    clipShape = 'https://atwebsite.blob.core.windows.net/images/hexagon.svg'
-                    imgSrc={avatar} />
+                  <AvatarCard avatar={{ height: '210px', bgColor: '#F2F2F2', paddingTop: '100px',
+                                        paddingBottom: '40px',
+                                        shapeSrc: 'https://atwebsite.blob.core.windows.net/images/hexagon.svg',
+                                        imageSrc: avatar.url}}
+                              name='X'
+                              role='Y' />
                 </div>
               ))
             }

@@ -13,7 +13,7 @@ const BgVideo: React.FC = () => {
   return (
       <div className="embed-video-container">
         <video muted autoPlay playsInline ref={videoRef}>
-          <source src="https://atwebsite.blob.core.windows.net/images/bg-video.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dmela7d4j/video/upload/v1687632649/avatar-grid/psn3ky6a3zg9gvhvf5n3.mp4" type="video/mp4" />
           Your browser does not support video tag.
         </video>
       </div>

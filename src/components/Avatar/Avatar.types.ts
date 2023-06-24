@@ -1,15 +1,15 @@
 export type MaskProps = {
     bgColor?: string,
-    clipShape: string,
+    shapeSrc: string,
 };
 
 type AvatarProps = {
-    cmpHeight?: string,
+    height?: string,
     bgColor?: string,
-    clipShape: string,
-    imgSrc: string,
-    marginT?: string,
-    marginB?: string,
+    shapeSrc: string,
+    imageSrc: string,
+    paddingTop?: string,
+    paddingBottom?: string,
 };
 
 export default AvatarProps;
