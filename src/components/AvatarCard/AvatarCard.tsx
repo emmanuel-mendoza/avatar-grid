@@ -5,7 +5,13 @@ import './AvatarCard.modules.css';
 
 const AvatarCard: React.FC<AvatarCardProps> = ({ avatar, name, role }): ReactElement => {
     return (
-        <Avatar {...avatar} />
+        <div className="avatar-card" style={{'--cover-color': avatar.bgColor} as React.CSSProperties}>
+            <Avatar {...avatar} />
+            <div className="avatar-card-info">
+                <p>{name}</p>
+                <p>{role}</p>
+            </div>
+        </div>
     );  
 }
 

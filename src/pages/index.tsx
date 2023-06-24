@@ -43,13 +43,13 @@ const IndexPage: React.FC<PageProps> = () => {
             <SideGrowingGrid coverColor="#F2F2F2">
             {
               avatars.map((avatar, i) => (
-                <div style={{ minWidth: '280px', maxWidth: '280px'}} key={i}>
+                <div style={{ minWidth: '280px', maxWidth: '280px', height: '100%'}} key={i}>
                   <AvatarCard avatar={{ height: '210px', bgColor: '#F2F2F2', paddingTop: '100px',
                                         paddingBottom: '40px',
                                         shapeSrc: 'https://atwebsite.blob.core.windows.net/images/hexagon.svg',
                                         imageSrc: avatar.url}}
-                              name='X'
-                              role='Y' />
+                              name={avatar.name}
+                              role={avatar.role} />
                 </div>
               ))
             }

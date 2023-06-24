@@ -1,0 +1,41 @@
+:root {
+    --cover-color: white;
+    --font-size: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .avatar-card {
+      --fontsize: 2rem;
+    }
+}
+
+.avatar-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.avatar-card-info {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-card-info > p {
+    position: relative;
+    background-color: var(--cover-color);
+    margin: 0px;
+    font-size: var(--fontsize);
+    color: #00B74F;
+    font-weight: bold;
+    width: 100%;
+}
+
+.avatar-card-info > :nth-child(2) {
+    flex-grow: 1;
+    font-size: calc(var(--fontsize) * 0.75);
+    font-weight: lighter;
+    padding-bottom: var(--fontsize);
+    flex-grow: 1;
+}
