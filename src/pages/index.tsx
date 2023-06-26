@@ -68,7 +68,7 @@ export const Head: HeadFC = () => (
       <title>Avatar Grid</title>
       <meta property="og:url" content="https://avatar-grid.vercel.app/" />
       <meta property="og:title" content="Avatar Grid" />
-      <meta property="og:image" content="https://atwebsite.blob.core.windows.net/images/avatar%20grid%20-%20ui%20design.png" />
+      <meta property="og:image" content="https://res.cloudinary.com/dmela7d4j/image/upload/v1687803053/avatar-grid/avatar-grid-cover.png" />
       <meta property="og:description" content="A simple avatar grid implementation" />
     </>
 );
