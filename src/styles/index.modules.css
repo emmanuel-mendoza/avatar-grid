@@ -16,6 +16,10 @@
     }
 }
 
+body {
+    background: linear-gradient(60.57deg, #2AD2C9 13.8%, #00B74F 32.6%, #9B26B6 66.3%, #24135F 90.67%);
+}
+
 .animated-bg {
     width: 100%;
     height: 100%;

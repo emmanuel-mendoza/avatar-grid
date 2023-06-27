@@ -10,7 +10,7 @@ const mainStyles: React.CSSProperties = {
   paddingRight: '6rem',
   paddingTop: '4rem',
   paddingBottom: '4rem',
-  backgroundColor: 'lightblue',
+  background: 'linear-gradient(60.57deg, #2AD2C9 13.8%, #00B74F 32.6%, #9B26B6 66.3%, #24135F 90.67%)',
   minHeight: '100vh',
   height: '100%',
   position: 'relative',
@@ -20,7 +20,7 @@ const wrapperStyles: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   rowGap: '4rem',
-  alignItems: 'center'
+  alignItems: 'center',
 }
 
 const avatars = [
